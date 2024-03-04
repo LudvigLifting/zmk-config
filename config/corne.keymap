@@ -101,7 +101,7 @@
 
                         bindings = <
        &none &none      &none      &none       &none       &none        &kp K_REDO     &kp K_CUT   &kp K_COPY   &kp K_PASTE   &kp PG_UP &none
-       &none &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none        &kp K_UNDO     &kp LEFT    &kp DOWN     &KP UP        &kp RIGHT &none
+       &none &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none        &kp K_UNDO     &kp LEFT    &kp DOWN     &kp UP        &kp RIGHT &none
        &none &none      &none      &none       &none       &none        &kp LS(HOME)   &kp HOME    &kp END      &kp LS(END)   &kp PG_DN &none
                                    &trans      &trans      &trans       &trans         &trans      &trans
                         >;
