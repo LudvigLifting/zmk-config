@@ -71,7 +71,7 @@
 
                         bindings = <
        &none &kp PLUS    &kp N7   &kp N8   &kp N9   &kp FSLH          &kp K_REDO    &none   &none      &none            &trans &none
-       &none &kp EQUAL   &kp N4   &kp N5   &kp N6   &kp ASTRIK        &kp K_UNDO    &none   &kp RA(Q)  &mt RA(Z) RA(W)  &mt RA(L) RA(P) &none
+       &none &kp EQUAL   &kp N4   &kp N5   &kp N6   &kp ASTRK        &kp K_UNDO    &none   &kp RA(Q)  &mt RA(Z) RA(W)  &mt RA(L) RA(P) &none
        &none &kp MINUS   &kp N1   &kp N2   &kp N3   &none             &none         &none   &trans     &trans           &trans &none
                                   &trans   &trans   &kp LCRTL         &trans        &trans  &trans
                         >;
