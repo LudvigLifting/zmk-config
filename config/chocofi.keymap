@@ -39,10 +39,10 @@ rpi: require_prior_idle {
 //                     ||   ESC   |  SPACE  |   TAB   |   |  ENTER  |   BSPC  |   DEL   ||
 
                         bindings = <
-        &kp Q        &kp W        &kp F         &kp P          &kp B                 &kp J           &kp L          &kp U                &kp Y          &kp SQT
-        &mt LGUI A   &mt LALT R   &mt LCTRL S   &mt LSHIFT T   &kp G                 &kp M           &mt LSHIFT N   &mt LCTRL E          &mt LALT I     &mt LGUI O
-        &kp Z        &kp X        &kp C         &kp D          &kp V                 &kp K           &kp H          &mt SEMICOLON COMMA  &mt SEMI DOT   &mt MINUS UNDERSCORE
-                                  &kp ESC       &lt SYM SPACE  &lt NAV TAB           &lt FUN RET     &lt NUM BSPC   &kp DEL
+       &none &kp Q        &kp W        &kp F         &kp P          &kp B                 &kp J           &kp L          &kp U                &kp Y          &kp SQT &none
+       &none &mt LGUI A   &mt LALT R   &mt LCTRL S   &mt LSHIFT T   &kp G                 &kp M           &mt LSHIFT N   &mt LCTRL E          &mt LALT I     &mt LGUI O &none
+       &none &kp Z        &kp X        &kp C         &kp D          &kp V                 &kp K           &kp H          &mt SEMICOLON COMMA  &mt SEMI DOT   &mt MINUS UNDERSCORE &none
+                                       &kp ESC       &lt SYM SPACE  &lt NAV TAB           &lt FUN RET     &lt NUM BSPC   &kp DEL
                         >;
                 };
 
@@ -54,25 +54,25 @@ rpi: require_prior_idle {
 //                     ||   ESC   |  SPACE  |   CTRL  |   |  ENTER  |   BSPC  |   DEL   ||
 
                         bindings = <
-        &kp GRAVE        &kp PRCNT        &kp EXCL         &kp QMARK          &kp GRAVE            &kp CARET   &kp AMPS         &kp LBRC         &kp RBRC        &kp PIPE
-        &mt LGUI MINUS   &mt LALT EQUAL   &mt LCTRL PLUS   &mt LSHIFT ASTRK   &mt BSLH FSLH        &kp UNDER   &mt LSHIFT DQT   &mt LCTRL LPAR   &mt LALT RPAR   &mt LGUI SQT
-        &kp AT           &kp DLLR         &kp SEMI         &kp SEMICOLON      &kp HASH             &kp TILDE   &kp LT           &kp LBKT         &kp RBKT        &kp GT
-                                          &trans           &trans             &kp LCTRL            &trans      &trans           &trans
+       &none &kp GRAVE        &kp PRCNT        &kp EXCL         &kp QMARK          &kp GRAVE            &kp CARET   &kp AMPS         &kp LBRC         &kp RBRC        &kp PIPE &none
+       &none &mt LGUI MINUS   &mt LALT EQUAL   &mt LCTRL PLUS   &mt LSHIFT ASTRK   &mt BSLH FSLH        &kp UNDER   &mt LSHIFT DQT   &mt LCTRL LPAR   &mt LALT RPAR   &mt LGUI SQT &none
+       &none &kp AT           &kp DLLR         &kp SEMI         &kp SEMICOLON      &kp HASH             &kp TILDE   &kp LT           &kp LBKT         &kp RBKT        &kp GT &none
+                                               &trans           &trans             &kp LCTRL            &trans      &trans           &trans
                         >;
                 };
 
                 number_layer {
 // -----------------------------------------------------------------------------------------------------------
-// ||    +    |    7    |    8    |    9    |    /    |   |  REDO   |  none   |  none   |  none   |  none   ||
+// ||    +    |    7    |    8    |    9    |    /    |   |  REDO   |  none   |  none   |  none   |  trans  ||
 // ||    =    |    4    |    5    |    6    |    *    |   |  UNDO   |  none   |    Å    |    ÄÆ   |    ÖØ   ||
 // ||    -    |    1    |    2    |    3    |   none  |   |  none   |  none   |  trans  |  trans  |  trans  ||
 //                     ||   ESC   |  SPACE  |   CTRL  |   |  ENTER  |  BSPC   |   DEL   ||
 
                         bindings = <
-        &kp PLUS    &kp N7   &kp N8   &kp N9   &kp FSLH          &kp K_REDO    &none   &none      &none            &trans
-        &kp EQUAL   &kp N4   &kp N5   &kp N6   &kp ASTRIK        &kp K_UNDO    &none   &kp RA(Q)  &mt RA(Z) RA(W)  &mt RA(L) RA(P) 
-        &kp MINUS   &kp N1   &kp N2   &kp N3   &none             &none         &none   &trans     &trans           &trans
-                             &trans   &trans   &kp LCRTL         &trans        &trans  &trans
+       &none &kp PLUS    &kp N7   &kp N8   &kp N9   &kp FSLH          &kp K_REDO    &none   &none      &none            &trans &none
+       &none &kp EQUAL   &kp N4   &kp N5   &kp N6   &kp ASTRIK        &kp K_UNDO    &none   &kp RA(Q)  &mt RA(Z) RA(W)  &mt RA(L) RA(P) &none
+       &none &kp MINUS   &kp N1   &kp N2   &kp N3   &none             &none         &none   &trans     &trans           &trans &none
+                                  &trans   &trans   &kp LCRTL         &trans        &trans  &trans
                         >;
                 };
 
@@ -84,10 +84,10 @@ rpi: require_prior_idle {
 //                     ||   ESC   |  SPACE  |   TAB   |   |  ENTER  |   BSPC  |   DEL   ||
 
                         bindings = <
-        &kp F12   &kp F7   &kp F8   &kp F9   &kp CAPS          &kp K_VOL_UP   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
-        &kp F11   &kp F4   &kp F5   &kp F6   &kp KP_NUM        &kp K_PP       &kp LSHIFT     &kp LCTRL      &kp LALT       &kp LGUI
-        &kp F10   &kp F1   &kp F2   &kp F3   &kp INS           &kp K_VOL_DN   &kp K_PREV     &kp K_NEXT     &nbt BT_CLR    &bt BT_CLR_ALL
-                           &trans   &trans   &trans            &trans         &trans         &trans
+       &none &kp F12   &kp F7   &kp F8   &kp F9   &kp CAPS          &kp K_VOL_UP   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4 &none
+       &none &kp F11   &kp F4   &kp F5   &kp F6   &kp KP_NUM        &kp K_PP       &kp LSHIFT     &kp LCTRL      &kp LALT       &kp LGUI &none
+       &none &kp F10   &kp F1   &kp F2   &kp F3   &kp INS           &kp K_VOL_DN   &kp K_PREV     &kp K_NEXT     &nbt BT_CLR    &bt BT_CLR_ALL &none
+                                &trans   &trans   &trans            &trans         &trans         &trans
                         >;
                 };
 
@@ -99,10 +99,10 @@ rpi: require_prior_idle {
 //                     ||   ESC   |  SPACE  |   TAB   |   |  ENTER  |   BSPC  |   DEL   ||
 
                         bindings = <
-        &none      &none      &none       &none       &none        &kp K_REDO     &kp K_CUT   &kp K_COPY   &kp K_PASTE   &kp PG_UP
-        &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none        &kp K_UNDO     &kp LEFT    &kp DOWN     &KP UP        &kp RIGHT
-        &none      &none      &none       &none       &none        &kp LS(HOME)   &kp HOME    &kp END      &kp LS(END)   &kp PG_DN
-                              &trans      &trans      &trans       &trans         &trans      &trans
+       &none &none      &none      &none       &none       &none        &kp K_REDO     &kp K_CUT   &kp K_COPY   &kp K_PASTE   &kp PG_UP &none
+       &none &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none        &kp K_UNDO     &kp LEFT    &kp DOWN     &KP UP        &kp RIGHT &none
+       &none &none      &none      &none       &none       &none        &kp LS(HOME)   &kp HOME    &kp END      &kp LS(END)   &kp PG_DN &none
+                                   &trans      &trans      &trans       &trans         &trans      &trans
                         >;
                 };
         };
