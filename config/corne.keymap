@@ -43,7 +43,7 @@
                         bindings = <
        &none &kp Q        &kp W        &kp F         &kp P          &kp B                 &kp J           &kp L          &kp U                &kp Y          &kp SQT &none
        &none &mt LGUI A   &mt LALT R   &mt LCTRL S   &mt LSHIFT T   &kp G                 &kp M           &mt LSHIFT N   &mt LCTRL E          &mt LALT I     &mt LGUI O &none
-       &none &kp Z        &kp X        &kp C         &kp D          &kp V                 &kp K           &kp H          &mt SEMICOLON COMMA  &mt SEMI DOT   &mt MINUS UNDERSCORE &none
+       &none &kp Z        &kp X        &kp C         &kp D          &kp V                 &kp K           &kp H          &mt SEMICOLON COMMA  &mt COLON DOT  &mt MINUS UNDERSCORE &none
                                        &kp ESC       &lt SYM SPACE  &lt NAV TAB           &lt FUN RET     &lt NUM BSPC   &kp DEL
                         >;
                 };
@@ -58,7 +58,7 @@
                         bindings = <
        &none &kp GRAVE        &kp PRCNT        &kp EXCL         &kp QMARK          &kp GRAVE            &kp CARET   &kp AMPS         &kp LBRC         &kp RBRC        &kp PIPE &none
        &none &mt LGUI MINUS   &mt LALT EQUAL   &mt LCTRL PLUS   &mt LSHIFT ASTRK   &mt BSLH FSLH        &kp UNDER   &mt LSHIFT DQT   &mt LCTRL LPAR   &mt LALT RPAR   &mt LGUI SQT &none
-       &none &kp AT           &kp DLLR         &kp SEMI         &kp SEMICOLON      &kp HASH             &kp TILDE   &kp LT           &kp LBKT         &kp RBKT        &kp GT &none
+       &none &kp AT           &kp DLLR         &kp COLON        &kp SEMICOLON      &kp HASH             &kp TILDE   &kp LT           &kp LBKT         &kp RBKT        &kp GT &none
                                                &trans           &trans             &kp LCTRL            &trans      &trans           &trans
                         >;
                 };
