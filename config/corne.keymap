@@ -41,7 +41,7 @@
 //                     ||   ESC   |  SPACE  |   TAB   |   |  ENTER  |   BSPC  |   DEL   ||
 
                         bindings = <
-       &none &kp Q        &kp W        &kp F         &kp P          &kp B                 &kp J           &kp L          &kp U                &kp Y          &kp SQT &none
+       &none &kp Q        &kp W        &kp F         &kp P          &kp B                 &kp J           &kp L          &kp U                &kp Y          &mt DQT SQT &none
        &none &mt LGUI A   &mt LALT R   &mt LCTRL S   &mt LSHIFT T   &kp G                 &kp M           &mt LSHIFT N   &mt LCTRL E          &mt LALT I     &mt LGUI O &none
        &none &kp Z        &kp X        &kp C         &kp D          &kp V                 &kp K           &kp H          &mt SEMICOLON COMMA  &mt COLON DOT  &mt MINUS UNDERSCORE &none
                                        &kp ESC       &lt SYM SPACE  &lt NAV TAB           &lt FUN RET     &lt NUM BSPC   &kp DEL
