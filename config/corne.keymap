@@ -50,61 +50,61 @@
 
                 symbol_layer {
 // -----------------------------------------------------------------------------------------------------------
-// ||    `    |    %    |    !    |    ?    |    ´    |   |    ^    |    &    |    {    |    }    |    |    ||
-// ||    -    |    =    |    +    |    *    |    /\   |   |    _    |    "    |    (    |    )    |    '    ||
-// ||    @    |    $    |    :    |    ;    |    #    |   |    ~    |    <    |    [    |    ]    |    >    ||
-//                     ||   ESC   |  SPACE  |   CTRL  |   |  ENTER  |   BSPC  |   DEL   ||
+// ||    `    |    %    |    '    |    |    |    -    |   |    ^    |    &    |    "    |    /\   |    ´    ||
+// ||    <    |    [    |    {    |    (    |    ?    |   |    !    |    )    |    }    |    ]    |    >    ||
+// ||    @    |    $    |    *    |    +    |    #    |   |    ~    |    =    |    ,;   |    .:   |    _    ||
+//                     ||   ESC   |  SPACE  |   TAB   |   |  ENTER  |   BSPC  |   DEL   ||
 
                         bindings = <
-       &none &kp GRAVE        &kp PRCNT        &kp EXCL         &kp QMARK          &kp GRAVE            &kp CARET   &kp AMPS         &kp LBRC         &kp RBRC        &kp PIPE &none
-       &none &mt LGUI MINUS   &mt LALT EQUAL   &mt LCTRL PLUS   &mt LSHIFT ASTRK   &mt BSLH FSLH        &kp UNDER   &mt LSHIFT DQT   &mt LCTRL LPAR   &mt LALT RPAR   &mt LGUI SQT &none
-       &none &kp AT           &kp DLLR         &kp COLON        &kp SEMICOLON      &kp HASH             &kp TILDE   &kp LT           &kp LBKT         &kp RBKT        &kp GT &none
-                                               &trans           &trans             &kp LCTRL            &trans      &trans           &trans
+       &none &kp GRAVE        &kp PRCNT      &kp SQT          &kp PIPE          &kp MINUS            &kp CARET   &kp AMPS         &kp DQT             &mt BSLH FSLH  &kp GRAVE &none
+       &none &mt LGUI LT      &mt LALT LBKT  &mt LCTRL LBRC   &mt LSHIFT LPAR   &kp QMARK            &kp EXCL    &mt LSHIFT RPAR  &mt LCTRL RBRC      &mt LALT RBRC  &mt LGUI GT &none
+       &none &kp AT           &kp DLLR       &kp ASTRK        &kp PLUS          &kp HASH             &kp TILDE   &kp EQUAL        &mt SEMICOLON COMMA &mt COLON DOT  &kp UNDERSCORE &none
+                                             &trans           &trans            &trans               &trans      &trans           &trans
                         >;
                 };
 
                 number_layer {
 // -----------------------------------------------------------------------------------------------------------
-// ||    +    |    7    |    8    |    9    |    /    |   |  REDO   |  none   |  none   |  none   |  trans  ||
-// ||    =    |    4    |    5    |    6    |    *    |   |  UNDO   |  none   |    Å    |    ÄÆ   |    ÖØ   ||
-// ||    -    |    1    |    2    |    3    |   none  |   |  none   |  none   |  trans  |  trans  |  trans  ||
-//                     ||   ESC   |  SPACE  |    0    |   |  ENTER  |  BSPC   |   DEL   ||
+// ||    F1   |    F2   |    F3   |    F4   |    F5   |   |    F6   |    F7   |    F8   |    F9   |   F10   ||
+// ||    1    |    2    |    3    |    4    |    5    |   |    6    |    7    |    8    |    9    |    0    ||
+// ||   none  |  none   |  none   |   F11   |   none  |   |  none   |   F12   |  trans  |  trans  |  trans  ||
+//                     ||   ESC   |  SPACE  |   TAB   |   |  ENTER  |  BSPC   |   DEL   ||
 
                         bindings = <
-       &none &kp PLUS        &kp N7   &kp N8   &kp N9   &kp FSLH         &kp K_REDO    &none   &none      &none            &trans &none
-       &none &mt LGUI EQUAL  &kp N4   &kp N5   &kp N6   &kp ASTRK        &kp K_UNDO    &none   &kp RA(W)  &mt RA(Z) RA(Q)  &mt RA(L) RA(P) &none
-       &none &kp MINUS       &kp N1   &kp N2   &kp N3   &none            &none         &none   &trans     &trans           &trans &none
-                                      &trans   &trans   &kp N0           &trans        &trans  &trans
+       &none &kp F1      &kp F2       &kp F3        &kp F4         &kp F5         &kp F6  &kp F7         &kp F8        &kp F9       &kp F10      &none
+       &none &mt LGUI N1 &mt LALT N2  &mt LCTRL N3  &mt LSHIFT N4  &kp N5         &kp N6  &mt LSHIFT N7  &mt LCTRL N8  &mt LALT N9  &mt LGUI N0  &none
+       &none &none       &none        &none         &kp F11        &none          &none   &kp F12        &trans        &trans       &trans       &none
+                                      &trans        &trans         &trans         &trans  &trans         &trans
                         >;
                 };
 
                 fun_layer {
 // -----------------------------------------------------------------------------------------------------------
-// ||   F12   |    F7   |    F8   |    F9   |  CAPLCK |   |  VOL+   |  BT_1   |  BT_2   |  BT_3   |  BT_4   ||
-// ||   F11   |    F4   |    F5   |    F6   |  NUMLCK |   |  PLAY   |  SHIFT  |   CTRL  |   ALT   |  SUPER  ||
-// ||   F10   |    F1   |    F2   |    F3   |  INS    |   |  VOL-   |  PREV   |   NEXT  |  BTCLR  | BTCLRAL ||
-//                     ||   ESC   |  SPACE  |   TAB   |   |  ENTER  |   BSPC  |   DEL   ||
+// || BT_SEL1 | BT_SEL2 | BT_SEL3 | BT_SEL4 |  none   |   |  none   |  none   |  none   |  none   |  none   ||
+// ||   none  |  none   | PLAY/PA |  SHIFT  |  PREV   |   |  NEXT   |  SHIFT  |    Å    |   ÄÆ    |   ÖØ    ||
+// || BT_CLA  |  BT_CL  |  none   |  none   |  VOL-   |   |  VOL+   |  none   |  none   |  none   |  none   ||
+//                     ||   ESC   |  SPACE  |  TAB    |   |  ENTER  |  BSPC   |   DEL   ||
 
                         bindings = <
-       &none &kp F12   &kp F7   &kp F8   &kp F9   &kp CAPS          &kp K_VOL_UP   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4 &none
-       &none &kp F11   &kp F4   &kp F5   &kp F6   &kp KP_NUM        &kp K_PP       &kp LSHIFT     &kp LCTRL      &kp LALT       &kp LGUI &none
-       &none &kp F10   &kp F1   &kp F2   &kp F3   &kp INS           &kp K_VOL_DN   &kp K_PREV     &kp K_NEXT     &bt BT_CLR    &bt BT_CLR_ALL &none
-                                &trans   &trans   &trans            &trans         &trans         &trans
+       &none &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none              &none         &none       &none       &none            &none            &none
+       &none &none           &none         &kp KP_PP     &kp LSHIFT    &kp K_PREV         &kp K_NEXT    &kp LSHIFT  &kp RA(W)   &mt RA(Z) RA(Q)  &mt RA(L) RA(P)  &none
+       &none &bt BT_CLR_ALL  &bt BT_CLR    &none         &none         &kp K_VOL_DN       &kp K_VOL_UP  &none       &none       &none            &none            &none
+                                           &trans        &trans        &trans             &trans        &trans      &trans
                         >;
                 };
 
                 nav_layer {
 // -----------------------------------------------------------------------------------------------------------
-// ||    X    |    X    |    X    |    X    |    X    |   |  REDO   |   CUT   |   COPY  |  PASTE  |  PAUP   ||
-// ||  SUPER  |   ALT   |   CTRL  |  SHIFT  |    X    |   |  UNDO   |   LEFT  |   DOWN  |    UP   |  RIGHT  ||
-// ||    X    |    X    |    X    |    X    |    X    |   |  LSHOME |   HOME  |   END   |  LSEND  |  PADN   ||
-//                     ||   ESC   |  SPACE  |   TAB   |   |  ENTER  |   BSPC  |   DEL   ||
+// ||  none   |  none   |  none   |  none   |  none   |   |  none   |   none  |   none  |  none   |  none   ||
+// ||  SUPER  |   ALT   |  CTRL   |  SHIFT  |  none   |   |  none   |   LEFT  |   DOWN  |   UP    |  RIGHT  ||
+// ||  none   |  PGUP   |  UNDO   |  HOME   |  S_HOME |   |  S_END  |   END   |   REDO  |  PGDN   |  none   ||
+//                     ||  ESC    |  SPACE  |   TAB   |   |  ENTER  |   BSPC  |   DEL   ||
 
                         bindings = <
-       &none &none      &none      &none       &none       &none        &kp K_REDO     &kp K_CUT   &kp K_COPY   &kp K_PASTE   &kp PG_UP &none
-       &none &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none        &kp K_UNDO     &kp LEFT    &kp DOWN     &kp UP        &kp RIGHT &none
-       &none &none      &none      &none       &none       &none        &kp LS(HOME)   &kp HOME    &kp END      &kp LS(END)   &kp PG_DN &none
-                                   &trans      &trans      &trans       &trans         &trans      &trans
+       &none &none  &none      &none       &none     &none                 &none        &none     &none       &none      &none      &none
+       &none &none  &none      &none       &none     &none                 &none        &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT  &none
+       &none &none  &kp PG_UP  &kp K_UNDO  &kp HOME  &kp LS(HOME)          &kp LS(END)  &kp END   &kp K_REDO  &kp PG_DN  &none      &none
+                               &trans      &trans    &trans                &trans       &trans    &trans
                         >;
                 };
         };
