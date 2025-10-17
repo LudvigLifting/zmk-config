@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <zephyr/kernel.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -35,19 +36,28 @@
                 hold-trigger-on-release;
             };
         };
+        oled_update_trigger: task {
+            compatible = "zmk,behavior-task";
+            #binding-cells = <0>;
+            binding = <&task_update_oled>;
+        };
 
         keymap {
                 compatible = "zmk,keymap";
                 // Function to update OLED display with WPM, battery, and layer
-                void oled_display_update(void) {
-                    uint32_t wpm = get_current_wpm();
-                    uint8_t battery_level = battery_get_percentage();
-                    uint8_t active_layer = zmk_keymap_get_active_layer();
+                void task_update_oled(void) {
+                    static uint32_t last_update = 0;
+                    uint32_t current_time = zmk_get_time();
+                    if (current_time - last_update >= 5000) {
+                        uint32_t wpm = get_current_wpm();
+                        uint8_t battery_level = battery_get_percentage();
+                        uint8_t active_layer = zmk_keymap_get_active_layer();
 
-                    char display_buffer[32];
-                    snprintf(display_buffer, sizeof(display_buffer),
-                             "WPM: %d   Bat: %d%%   Layer: %d", wpm, battery_level, active_layer);
-                    zmk_display_output(display_buffer);
+                        char display_buffer[32];
+                        snprintf(display_buffer, sizeof(display_buffer),
+                                 "WPM: %d   Bat: %d%%   Layer: %d", wpm, battery_level, active_layer);
+                        zmk_display_output(display_buffer);
+                    }
                 }
 
                 alpha_layer {
@@ -108,6 +118,7 @@
        &none &bt BT_CLR_ALL  &bt BT_CLR    &none         &none         &kp K_VOL_DN          &kp K_VOL_UP  &none       &none       &none            &none            &none
                                            &trans        &trans        &trans                &trans        &trans      &trans
                         >;
+                    &oled_update_trigger,
                 };
 
                 nav_layer {
